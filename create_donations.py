@@ -9,9 +9,7 @@ output_report = open("hub_owner_time_donations_report.txt", "w", encoding='utf-8
 def write_record(person_id, hub_id, donation_date):
     record = {'donation_item_id': 40013, 'person_id': person_id, 'donation_date': donation_date, 'donation_qty': 5, 'time_value': 5, 'donor_hub_id': hub_id}
     json.dump(record, output_donations, ensure_ascii=False, indent=4)
-
-def write_report(person_id, hub_id, donation_date):
-    line = 'person_id: ' + person_id.__str__() + ', donation_date: ' + donation_date.__str__() + ', hub_id: ' + hub_id.__str__() + '\n'
+    line = 'person_id: ' + person_id.__str__() + ', donation_date: ' + donation_date + ', hub_id: ' + hub_id.__str__() + '\n'
     output_report.writelines(line)
 
 donation_dates = pd.read_csv("donation_dates.csv", parse_dates=["donation_date"])
@@ -33,6 +31,5 @@ for owner in owner_dates.itertuples():
     for date in donation_dates.itertuples():
         if date.donation_date >= owner.owner_start_date and date.donation_date <= end_date:
             write_record(owner.person_id, owner.hub_id, date.donation_date.__str__())
-            write_report(owner.person_id, owner.hub_id, date.donation_date.__str__())
 
 output_donations.close()
