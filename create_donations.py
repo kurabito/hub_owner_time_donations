@@ -11,7 +11,9 @@ def write_record(person_id, hub_id, donation_date_id, donation_date):
     json.dump(record, output_donations, ensure_ascii=False, indent=4)
 
 def write_report_line(person_id, hub_id, start_date, end_date):
-    line = 'person_id: ' + person_id.__str__() + ', hub_id: ' + hub_id.__str__() + ', donation dates: ' + start_date.__str__() + ' - ' + end_date.__str__() + '\n'
+    start = start_date.strftime('%Y-%m-%d')
+    end = end_date.strftime('%Y-%m-%d')
+    line = 'person_id: ' + person_id.__str__() + ', hub_id: ' + hub_id.__str__() + ', donation dates: ' + start + ' - ' + end + '\n'
     output_report.writelines(line)
 
 donation_dates = pd.read_csv("donation_dates.csv", parse_dates=["check_in_date_date"])
