@@ -7,7 +7,7 @@ output_donations = open("hub_owner_time_donations.json", "w", encoding='utf-8')
 output_report = open("hub_owner_time_donations_report.txt", "w", encoding='utf-8')
 
 def write_record(person_id, hub_id, donation_date_id, donation_date, other):
-    record = {'donation_item_id': 40013, 'person_id': person_id, 'check_in_date_id': donation_date_id, 'donation_date': donation_date, 'donation_qty': 5, 'time_value': 5, 'hub_id': hub_id, 'donation_other': other}
+    record = {'donation_item_id': 40013, 'person_id': person_id, 'check_in_date_id': donation_date_id, 'donation_date': donation_date, 'donation_qty': 5, 'time_value': 5, 'hub_id': hub_id, 'donor_hub_id': hub_id, 'donation_other': other}
     json.dump(record, output_donations, ensure_ascii=False, indent=4)
 
 def write_report_line(person_id, hub, start_date, end_date):
