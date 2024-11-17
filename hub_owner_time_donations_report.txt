@@ -73,7 +73,6 @@ person_id: 901690, hub: 30046 Snohomish, donation dates: 2023-02-23 - 2024-06-23
 person_id: 901563, hub: 30047 Hailey - Wood River, donation dates: 2021-04-18 - 2024-06-23
 person_id: 902139, hub: 30048 Developers Test Hub, donation dates: 2021-10-14 - 2024-06-23
 person_id: 902291, hub: 30049 Meridian - Meridian, donation dates: 2021-10-13 - 2024-02-05
-person_id: 900386, hub: 30050 Cindy Shultz , donation dates: 2020-10-18 - 2024-06-23
 person_id: 902119, hub: 30053 Mercer Island - Holy Trinity Lutheran Church, donation dates: 2021-09-18 - 2024-06-23
 person_id: 902053, hub: 30054 Mukilteo - Harbour Pointe, donation dates: 2021-08-30 - 2024-06-23
 person_id: 902215, hub: 30055 Whidbey Island - Oak Harbor, donation dates: 2021-09-26 - 2022-07-05
